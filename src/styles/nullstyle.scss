@@ -1,7 +1,7 @@
 * {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 *,
 *:before,
@@ -10,19 +10,27 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-aside,
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
 nav,
 footer,
 header,
-section {
+aside {
   display: block;
 }
 
 html,
 body {
   height: 100%;
-}
-body {
+  width: 100%;
+  font-size: 100%;
   line-height: 1;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -31,14 +39,14 @@ body {
 input,
 button,
 textarea {
-  font-size: inherit;
+  font-family: inherit;
 }
+
 input::-ms-clear {
   display: none;
 }
 button {
   cursor: pointer;
-  background-color: inherit;
 }
 button::-moz-focus-inner {
   padding: 0;
@@ -57,12 +65,13 @@ ul li {
 img {
   vertical-align: top;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: inherit;
   font-size: inherit;
+  font-weight: 400;
 }

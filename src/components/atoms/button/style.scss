@@ -1,0 +1,23 @@
+.btn {
+  background: #5C98F1;
+  border-radius: 8px;
+  //padding: 17.3px 95.65px;
+  width: 233px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 153%;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      background: #4583DE;
+    }
+  }
+  &:focus {
+    background: #2C6AC7;
+  }
+  &:disabled {
+    background: #D1D1D1;
+  }
+}

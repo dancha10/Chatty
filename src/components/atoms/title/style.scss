@@ -1,0 +1,19 @@
+h1 {
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 1.2em;
+  color: #333333;
+  @media (max-width: 768px) {
+    font-size: 27px;
+    line-height: 1.22em;
+  }
+}
+
+.Text {
+  &__second {
+    color: #5E93E7;
+  }
+  &__third {
+    color: #B3CDF8;
+  }
+}
