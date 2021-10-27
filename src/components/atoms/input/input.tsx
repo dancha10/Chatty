@@ -2,34 +2,34 @@ import React, { useState } from 'react';
 import './style.scss';
 import classList from 'classnames';
 
-type InputType = {
+export type InputType = {
   placeholder: string;
   type?: 'text' | 'password';
   isError?: boolean;
   id?: string;
+  InputValidator: any;
 };
 
-const Input: React.FC<InputType> = ({ type, placeholder, isError, id }) => {
+export const Input: React.FC<InputType> = ({
+  type = 'text',
+  placeholder,
+  isError = false,
+  id,
+  InputValidator,
+}) => {
   const [active, setActive] = useState(false);
   const isActive = (value: string): void => (value === '' ? setActive(false) : setActive(true));
 
   return (
-    <div className={classList({ input__wrapper: isError })}>
+    <div className={classList('input-wrapper', { 'input-wrapper--error': isError })}>
       <input
         type={type}
+        {...InputValidator}
         placeholder={placeholder}
         onChange={event => isActive(event.target.value)}
-        className={classList('input', { _err: isError }, { _active: active })}
+        className={classList('input', { 'input--err': isError }, { 'input--active': active })}
         id={id}
       />
     </div>
   );
 };
-
-Input.defaultProps = {
-  type: 'text',
-  isError: false,
-  id: '',
-};
-
-export default Input;

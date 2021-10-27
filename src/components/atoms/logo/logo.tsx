@@ -3,13 +3,11 @@ import logoLeft from '../../../img/logoLeft.svg';
 import logoRight from '../../../img/logoRight.svg';
 import './style.scss';
 
-const Logo = () => {
+export const Logo = () => {
   return (
-    <div className="LogoWrapper">
+    <div className="logo-wrapper">
       <img src={logoLeft} alt="logoLeft" />
       <img src={logoRight} alt="LogoRight" />
     </div>
   );
 };
-
-export default Logo;

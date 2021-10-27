@@ -1,0 +1,19 @@
+.dialog-header {
+  max-width: 1078px;
+  height: 96px;
+  background: #FFFFFF;
+  align-items: center;
+  display: flex;
+  padding: 24px;
+
+  &__body {
+
+  }
+
+  &__status {
+    margin: 4px 0px 0px 0px;
+    font-size: 16px;
+    line-height: 1.25em;
+    color: #949494;
+  }
+}

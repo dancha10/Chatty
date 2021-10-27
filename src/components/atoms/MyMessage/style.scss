@@ -1,0 +1,79 @@
+@import "./src/styles/variables";
+
+.my-message {
+  max-width: 490px;
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
+  padding: 12px;
+  background: #D7E6FF;
+  font-size: 16px;
+  line-height: 1.25em;
+  color: #303030;
+  border: 1px solid #C5DAFF;
+  border-radius: 12px 0px 12px 12px;
+  @media (max-width: $md3) {
+    max-width: 336px;
+    font-size: 14px;
+    line-height: 1.21em;
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5%;
+  }
+
+  &:after {
+    border: 12px solid transparent;
+    border-left: 12px solid #D7E6FF;
+    border-top: 12px solid #D7E6FF;
+  }
+
+  &:before {
+    border: 12px solid transparent;
+    border-left: 12px solid #C5DAFF;
+    border-top: 12px solid #C5DAFF;
+    top: -0.8%;
+    right: -5.7%;
+
+    z-index: -1;
+  }
+
+  // .my-message__file
+  &__file {
+    display: flex;
+    align-items: center;
+  }
+
+  // .my-message__body
+  &__body {
+    margin: 0px 0px 0px 7.3px;
+  }
+
+  // .my-message__filename
+  &__filename {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25em;
+    color: #303030;
+    @media (max-width: $md3) {
+      font-size: 14px;
+      line-height: 1.21em;
+    }
+  }
+
+  // .my-message__file-size
+  &__file-size {
+    margin: 2px 0px 0px 0px;
+    font-size: 14px;
+    line-height: 1.21em;
+    color: #303030;
+    @media (max-width: $md3) {
+      font-size: 13px;
+      line-height: 1.23em;
+    }
+  }
+}

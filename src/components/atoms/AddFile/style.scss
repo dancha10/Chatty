@@ -1,0 +1,8 @@
+.add-file {
+  cursor: pointer;
+  &__input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+}

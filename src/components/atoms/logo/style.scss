@@ -1,8 +1,5 @@
-.LogoWrapper {
-  & img {
-    &:not(:last-child) {
-      margin-right: 1.8px;
-    }
+.logo-wrapper img {
+  &:not(:last-child) {
+    margin-right: 1.8px;
   }
-
 }

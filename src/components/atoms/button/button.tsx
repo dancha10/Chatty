@@ -8,22 +8,15 @@ type ButtonType = {
   onClick: () => void;
 };
 
-const Button: React.FC<ButtonType> = ({ type, disabled, text, onClick }) => {
+export const Button: React.FC<ButtonType> = ({
+  type = 'submit',
+  disabled = false,
+  text,
+  onClick,
+}) => {
   return (
-    <button
-      type={type === 'submit' ? 'submit' : 'button'} // Костыль, иначе ругается EsLint
-      disabled={disabled}
-      onClick={onClick}
-      className="btn"
-    >
+    <button type={type} disabled={disabled} onClick={onClick} className="btn">
       {text}
     </button>
   );
 };
-
-Button.defaultProps = {
-  type: 'submit',
-  disabled: true,
-};
-
-export default Button;
