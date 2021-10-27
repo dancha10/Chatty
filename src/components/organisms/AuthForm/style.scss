@@ -1,17 +1,15 @@
 @import "src/styles/variables";
 
-.AuthForm {
+.auth-form {
   display: flex;
   flex-direction: column;
-  @media (max-width: $md3) {
-    align-items: center;
-  }
 
   &__login {
     @media (min-width: $md3) {
       margin: 0px 0px 32px 0px;
     }
     margin: 0px 0px 24px 0px;
+    position: relative;
   }
 
   &__password {
@@ -19,5 +17,14 @@
       margin: 0px 0px 48px 0px;
     }
     margin: 0px 0px 80px 0px;
+    position: relative;
+  }
+  &__error {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.46em;;
+    color: #FB6262;
+    position: absolute;
+    left: 2%;
   }
 }
