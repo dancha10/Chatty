@@ -1,0 +1,21 @@
+.textarea {
+  max-width: 1078px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+
+  &__input {
+    width: 920px;
+    resize: none;
+    height: 25px;
+    &::placeholder {
+      transform: translateY(3px);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.25em;
+      color: #CACACA;
+    }
+  }
+}

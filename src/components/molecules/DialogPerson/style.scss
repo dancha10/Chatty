@@ -1,0 +1,22 @@
+.dialog-person {
+  width: 362px;
+  height: 72px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  // .dialog-person__body
+  &__body {
+    margin-left: 12px;
+    max-width: 235px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  // .dialog-person__name
+  &__name {
+  }
+  // .dialog-person__message
+  &__message {
+    margin-top: 4px;
+  }
+}
