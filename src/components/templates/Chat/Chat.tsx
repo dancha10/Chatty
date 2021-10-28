@@ -11,6 +11,8 @@ import emptyUser from '../../../img/emptyDialogs.svg';
 // eslint-disable-next-line import/no-cycle
 import { CompanionListObject, MessageListObject } from '../../../page/ChatPage/ChatPage';
 
+/* НУ ТУТ BULLSHIT КОД ПРостите... */
+
 interface ChatType {
   CompanionListData: Array<CompanionListObject>;
   MessageListDate: Array<MessageListObject>;
@@ -22,7 +24,7 @@ export const Chat: React.FC<ChatType> = ({ CompanionListData, MessageListDate })
   ));
 
   const location = useLocation<string>();
-  const peopleId = +location.pathname.slice(-1) - 1;
+  const peopleId = +location.pathname.slice(-1) - 1; // Eslint заменяет на const :/
 
   return (
     <div className="chat">
