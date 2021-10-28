@@ -1,17 +1,17 @@
 import React from 'react';
 import './style.scss';
 
-type DialogHeaderType = {
+export type DialogHeaderType = {
   name: string;
-  status: string;
+  lastSeen: string;
 };
 
-export const DialogHeader: React.FC<DialogHeaderType> = ({ name, status }) => {
+export const DialogHeader: React.FC<DialogHeaderType> = ({ name, lastSeen }) => {
   return (
     <div className="dialog-header">
       <div className="dialog-header__body">
         <h3>{name}</h3>
-        <span className="dialog-header__status">{status}</span>
+        <span className="dialog-header__status">{lastSeen}</span>
       </div>
     </div>
   );

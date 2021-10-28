@@ -16,7 +16,7 @@ export const FormField: React.FC<FormFieldType> = ({
   InputValidator,
 }) => {
   return (
-    <div className="form-field">
+    <>
       <Label text={text} forHtml={forHtml} />
       <Input
         type={type}
@@ -25,6 +25,6 @@ export const FormField: React.FC<FormFieldType> = ({
         isError={isError}
         InputValidator={InputValidator}
       />
-    </div>
+    </>
   );
 };

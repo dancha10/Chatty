@@ -4,7 +4,7 @@ import male from '../../../img/male.svg';
 import female from '../../../img/female.svg';
 
 export type AvatarType = {
-  sex: 'male' | 'female';
+  sex: string;
 };
 
 export const Avatar: React.FC<AvatarType> = ({ sex }) => {

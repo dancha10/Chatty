@@ -1,7 +1,7 @@
 @import "./src/styles/variables";
 
 .my-message {
-  max-width: 490px;
+  max-width: max-content;
   position: relative;
   display: inline-block;
   word-wrap: break-word;
