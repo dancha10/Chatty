@@ -1,0 +1,21 @@
+.message-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &__message-box {
+    flex: 0 1 922px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    &::-webkit-scrollbar {
+      width: 6px; /* ширина для вертикального скролла */
+      position: absolute;
+      //height: 8px;
+      background-color: #E1ECFE;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #C5DAFF;
+    }
+  }
+}
