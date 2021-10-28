@@ -34,6 +34,10 @@
     "@typescript-eslint/no-shadow": [
       "error"
     ],
+    "import/no-unresolved": [
+      2,
+      { "caseSensitive": false }
+    ],
     "react/button-has-type": "off",
     "prettier/prettier": "error",
     "arrow-body-style": "off",
