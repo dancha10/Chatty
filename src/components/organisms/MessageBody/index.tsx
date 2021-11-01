@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import { DialogHeader, DialogHeaderType } from '../../atoms/DialogHeader/DialogHeader';
+import { DialogHeader, DialogHeaderType } from '../../atoms/DialogHeader';
 import { Textarea } from '../../molecules/Textarea';
 import { MyMessage } from '../../atoms/MyMessage';
 import { CompanionMessage } from '../../atoms/CompanionMessage';
