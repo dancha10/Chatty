@@ -1,8 +1,8 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
-import { FormField } from '../../molecules/FormField/FormField';
-import { Button } from '../../atoms/Button/Button';
+import { FormField } from '../../molecules/FormField';
+import { Button } from '../../atoms/Button';
 import { SCREENS } from '../../../routes/endpoints';
 import './style.scss';
 

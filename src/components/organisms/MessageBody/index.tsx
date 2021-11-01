@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.scss';
 import { DialogHeader, DialogHeaderType } from '../../atoms/DialogHeader/DialogHeader';
-import { Textarea } from '../../molecules/Textarea/Textarea';
-import { MyMessage } from '../../atoms/MyMessage/MyMessage';
-import { CompanionMessage } from '../../atoms/CompanionMessage/CompanionMessage';
+import { Textarea } from '../../molecules/Textarea';
+import { MyMessage } from '../../atoms/MyMessage';
+import { CompanionMessage } from '../../atoms/CompanionMessage';
 
 type DialogMessageDataType = {
   idMessage: number;

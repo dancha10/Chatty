@@ -1,6 +1,6 @@
 import React from 'react';
-import { Logo } from '../../atoms/Logo/Logo';
-import { AuthForm } from '../../organisms/AuthForm/AuthForm';
+import { Logo } from '../../atoms/Logo';
+import { AuthForm } from '../../organisms/AuthForm';
 import './style.scss';
 import Main from '../../../img/main.png';
 import Corner from '../../../img/Angle.svg';

@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
-import { SendMessage } from '../../atoms/SendMessage/SendMessage';
-import { AddFile } from '../../atoms/AddFile/AddFile';
+import { SendMessage } from '../../atoms/SendMessage';
+import { AddFile } from '../../atoms/AddFile';
 
 type TextareaType = {
   placeholder?: string;

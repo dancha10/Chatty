@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Logo } from '../../atoms/Logo/Logo';
-import { DialogPerson } from '../../molecules/DialogPerson/DialogPerson';
+import { Logo } from '../../atoms/Logo';
+import { DialogPerson } from '../../molecules/DialogPerson';
 import profile from '../../../img/profile.svg';
 import { SCREENS } from '../../../routes/endpoints';
 import emptyUser from '../../../img/emptyDialogs.svg';
-import { MessageBody } from '../../organisms/MessageBody/MessageBody';
+import { MessageBody } from '../../organisms/MessageBody';
 import { CompanionListObject, MessageListObject } from '../../../store';
 import './style.scss';
 

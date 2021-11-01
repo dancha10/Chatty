@@ -1,7 +1,7 @@
 import React from 'react';
 import fileIcon from '../../../img/file.svg';
 import './style.scss';
-import { MeMessageType } from '../MyMessage/MyMessage';
+import { MeMessageType } from '../MyMessage';
 
 export const CompanionMessage: React.FC<MeMessageType> = ({
   type = 'text',

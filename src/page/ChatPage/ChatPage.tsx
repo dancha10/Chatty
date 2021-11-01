@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chat } from '../../components/templates/Chat/Chat';
+import { Chat } from '../../components/templates/Chat';
 import { CompanionListObject, MessageListObject } from '../../store';
 
 const CompanionListData: Array<CompanionListObject> = [

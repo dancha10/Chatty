@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.scss';
-import { Avatar, AvatarType } from '../../atoms/Avatar/Avatar';
+import { Avatar, AvatarType } from '../../atoms/Avatar';
 import { SCREENS } from '../../../routes/endpoints';
 
 export interface DialogPersonType extends AvatarType {
