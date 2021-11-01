@@ -1,11 +1,10 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 import { FormField } from '../../molecules/FormField/FormField';
 import { Button } from '../../atoms/Button/button';
-import './style.scss';
-// eslint-disable-next-line import/order
-import { useHistory } from 'react-router-dom';
 import { SCREENS } from '../../../routes/endpoints';
+import './style.scss';
 
 type InputValidatorType = {
   name: string;
@@ -18,7 +17,6 @@ export const AuthForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<InputValidatorType>();
-  // eslint-disable-next-line no-console
   const history = useHistory();
   const onSubmit: SubmitHandler<InputValidatorType> = data => {
     history.push(SCREENS.SCREENS__MESSENGER);

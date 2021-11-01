@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import './style.scss';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Logo } from '../../atoms/Logo/logo';
 import { DialogPerson } from '../../molecules/DialogPerson/DialogPerson';
 import profile from '../../../img/profile.svg';
-// eslint-disable-next-line import/no-cycle
-import { MessageBody } from '../../organisms/MessageBody/MessageBody';
 import { SCREENS } from '../../../routes/endpoints';
 import emptyUser from '../../../img/emptyDialogs.svg';
-// eslint-disable-next-line import/no-cycle
-import { CompanionListObject, MessageListObject } from '../../../page/ChatPage/ChatPage';
+import { MessageBody } from '../../organisms/MessageBody/MessageBody';
+import { CompanionListObject, MessageListObject } from '../../../store';
+import './style.scss';
 
 /* НУ ТУТ BULLSHIT КОД ПРостите... */
 

@@ -1,13 +1,6 @@
 import React from 'react';
-// eslint-disable-next-line import/no-cycle
 import { Chat } from '../../components/templates/Chat/Chat';
-
-export type CompanionListObject = {
-  id: number;
-  name: string;
-  lastMessage: string;
-  sex: string;
-};
+import { CompanionListObject, MessageListObject } from '../../store';
 
 const CompanionListData: Array<CompanionListObject> = [
   { id: 1, name: 'Danil Bruh', lastMessage: 'Wtf', sex: 'male' },
@@ -18,18 +11,6 @@ const CompanionListData: Array<CompanionListObject> = [
   { id: 6, name: 'Van Larr', lastMessage: 'Gucci', sex: 'male' },
   { id: 7, name: 'Lui Viton', lastMessage: 'Give me your many', sex: 'female' },
 ];
-
-export type MessageListObject = {
-  id: number;
-  lastSeen: string;
-  dialog: Array<DialogMessageDataType>;
-};
-
-export type DialogMessageDataType = {
-  idMessage: number;
-  sender: string;
-  message: string;
-};
 
 const MessageListDate: Array<MessageListObject> = [
   {
@@ -146,12 +127,6 @@ const MessageListDate: Array<MessageListObject> = [
   },
 ];
 
-const ChatPage = () => {
-  return (
-    <>
-      <Chat MessageListDate={MessageListDate} CompanionListData={CompanionListData} />
-    </>
-  );
+export const ChatPage = () => {
+  return <Chat MessageListDate={MessageListDate} CompanionListData={CompanionListData} />;
 };
-
-export default ChatPage;

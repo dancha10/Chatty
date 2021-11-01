@@ -4,8 +4,12 @@ import { DialogHeader, DialogHeaderType } from '../../atoms/DialogHeader/DialogH
 import { Textarea } from '../../molecules/Textarea/Textarea';
 import { MyMessage } from '../../atoms/MyMessage/MyMessage';
 import { CompanionMessage } from '../../atoms/CompanionMessage/CompanionMessage';
-// eslint-disable-next-line import/no-cycle
-import { DialogMessageDataType } from '../../../page/ChatPage/ChatPage';
+
+type DialogMessageDataType = {
+  idMessage: number;
+  sender: string;
+  message: string;
+};
 
 interface MessageBodyType extends DialogHeaderType {
   MessageListDate: Array<DialogMessageDataType>;

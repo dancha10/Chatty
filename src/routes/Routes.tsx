@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Authentication } from '../page/Authentication/Authentication';
 import { SCREENS } from './endpoints';
-import ChatPage from '../page/ChatPage/ChatPage';
+import { ChatPage } from '../page/ChatPage/ChatPage';
 
 export const Routes: FC = () => {
   return (
