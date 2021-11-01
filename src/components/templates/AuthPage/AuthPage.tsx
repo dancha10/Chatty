@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo } from '../../atoms/Logo/logo';
+import { Logo } from '../../atoms/Logo/Logo';
 import { AuthForm } from '../../organisms/AuthForm/AuthForm';
 import './style.scss';
 import Main from '../../../img/main.png';

@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-type ButtonType = {
+export type ButtonType = {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   text: string;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Label, LabelType } from '../../atoms/Label/label';
-import { Input, InputType } from '../../atoms/Input/input';
+import { Label, LabelType } from '../../atoms/Label/Label';
+import { Input, InputType } from '../../atoms/Input/Input';
 
 import './style.scss';
 

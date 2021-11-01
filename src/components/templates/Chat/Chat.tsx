@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { Logo } from '../../atoms/Logo/logo';
+import { Logo } from '../../atoms/Logo/Logo';
 import { DialogPerson } from '../../molecules/DialogPerson/DialogPerson';
 import profile from '../../../img/profile.svg';
 import { SCREENS } from '../../../routes/endpoints';

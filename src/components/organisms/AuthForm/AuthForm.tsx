@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import { FormField } from '../../molecules/FormField/FormField';
-import { Button } from '../../atoms/Button/button';
+import { Button } from '../../atoms/Button/Button';
 import { SCREENS } from '../../../routes/endpoints';
 import './style.scss';
 
