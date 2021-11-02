@@ -1,6 +1,6 @@
 {
-  "name": "ilink-chatty",
-  "version": "0.1.0",
+  "name": "chatty",
+  "version": "0.3.2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

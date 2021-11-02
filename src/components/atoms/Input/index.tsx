@@ -7,7 +7,7 @@ export type InputType = {
   type?: 'text' | 'password';
   isError?: boolean;
   id?: string;
-  InputValidator: any;
+  InputValidator: Object;
 };
 
 export const Input: React.FC<InputType> = ({
