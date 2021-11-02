@@ -19,13 +19,23 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        sender: 'I',
+        isCompanionMessage: true,
         message: 'Koko lo',
       },
       {
         idMessage: 2,
-        sender: 'you',
+        isCompanionMessage: false,
         message: 'Kek',
+      },
+      {
+        idMessage: 3,
+        isCompanionMessage: true,
+        message: 'Ubit Billa',
+      },
+      {
+        idMessage: 4,
+        isCompanionMessage: false,
+        message: 'Uma TUrman',
       },
     ],
   },
@@ -35,12 +45,12 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        sender: 'I',
+        isCompanionMessage: true,
         message: 'DHSHFDSHFJ',
       },
       {
         idMessage: 2,
-        sender: 'you',
+        isCompanionMessage: false,
         message: 'beeeerrr',
       },
     ],
@@ -51,12 +61,12 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        sender: 'you',
+        isCompanionMessage: true,
         message: 'MAMA',
       },
       {
         idMessage: 2,
-        sender: 'I',
+        isCompanionMessage: false,
         message: 'PAPA',
       },
     ],
@@ -67,12 +77,12 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        sender: 'you',
+        isCompanionMessage: true,
         message: 'MAMA',
       },
       {
         idMessage: 2,
-        sender: 'I',
+        isCompanionMessage: false,
         message: 'PAPA',
       },
     ],
@@ -83,12 +93,12 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        sender: 'you',
+        isCompanionMessage: true,
         message: 'LEATHERMAN',
       },
       {
         idMessage: 2,
-        sender: 'I',
+        isCompanionMessage: false,
         message: '300BUCKS',
       },
     ],
@@ -99,12 +109,12 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        sender: 'you',
+        isCompanionMessage: true,
         message: 'GUGG',
       },
       {
         idMessage: 2,
-        sender: 'I',
+        isCompanionMessage: false,
         message: 'FUCK',
       },
     ],
@@ -115,12 +125,12 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        sender: 'you',
+        isCompanionMessage: true,
         message: 'GMMMUGG',
       },
       {
         idMessage: 2,
-        sender: 'I',
+        isCompanionMessage: false,
         message: 'BOSS',
       },
     ],

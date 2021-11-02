@@ -1,6 +1,6 @@
 @import "./src/styles/variables";
 
-.my-message {
+.message {
   max-width: max-content;
   position: relative;
   display: inline-block;
@@ -12,34 +12,61 @@
   color: #303030;
   border: 1px solid #C5DAFF;
   border-radius: 12px 0px 12px 12px;
+  float: right;
+  margin: 0px 36px 36px 0px;
+
+  &:after {
+    position: absolute;
+    content: '';
+    border: 12px solid transparent;
+    border-left: 12px solid #C5DAFF;
+    border-top: 12px solid #C5DAFF;
+    top: -2%;
+    right: -20%;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    border: 12px solid transparent;
+    border-left: 12px solid #D7E6FF;
+    border-top: 12px solid #D7E6FF;
+    top: 0%;
+    right: -18%;
+    z-index: 12;
+  }
+
   @media (max-width: $md3) {
     max-width: 336px;
     font-size: 14px;
     line-height: 1.21em;
   }
 
-  &:after,
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -5%;
-  }
 
-  &:after {
-    border: 12px solid transparent;
-    border-left: 12px solid #D7E6FF;
-    border-top: 12px solid #D7E6FF;
-  }
+  &--companion {
+    background: #FFFFFF;
+    border-radius: 0px 12px 12px 12px;
+    float: left;
+    margin: 0px 0px 36px 36px;
+    &:after {
+      position: absolute;
+      content: '';
+      border: 12px solid transparent;
+      border-right: 12px solid #C5DAFF;
+      border-top: 12px solid #C5DAFF;
+      top: -2%;
+      right: 87%;
 
-  &:before {
-    border: 12px solid transparent;
-    border-left: 12px solid #C5DAFF;
-    border-top: 12px solid #C5DAFF;
-    top: -0.8%;
-    right: -5.7%;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      border: 12px solid transparent;
+      border-right: 12px solid #FFFFFF;
+      border-top: 12px solid #FFFFFF;
+      top: 0%;
+      right: 85%;
 
-    z-index: -1;
+    }
   }
 
   // .my-message__file

@@ -8,6 +8,7 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     &::-webkit-scrollbar {
       width: 6px; /* ширина для вертикального скролла */
       position: absolute;
@@ -16,6 +17,9 @@
     }
     &::-webkit-scrollbar-thumb {
       background-color: #C5DAFF;
+    }
+    & > li {
+      list-style-type: none;
     }
   }
 }

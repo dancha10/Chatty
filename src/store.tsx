@@ -7,7 +7,7 @@ export interface CompanionListObject {
 
 export type DialogMessageDataType = {
   idMessage: number;
-  sender: string;
+  isCompanionMessage: boolean;
   message: string;
 };
 
