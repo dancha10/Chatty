@@ -18,7 +18,7 @@ interface ChatType {
 
 export const Chat: React.FC<ChatType> = ({ CompanionListData, MessageListDate }) => {
   const CompanionList = CompanionListData.map(d => (
-    <DialogPerson name={d.name} message={d.lastMessage} id={d.id} sex={d.sex} />
+    <DialogPerson name={d.name} message={d.lastMessage} id={d.id} sex={d.sex} key={d.id} />
   ));
 
   const location = useLocation<string>();
@@ -34,7 +34,14 @@ export const Chat: React.FC<ChatType> = ({ CompanionListData, MessageListDate })
       </div>
       <div className="chat__container">
         <div className="chat__dialog-list">
-          {CompanionList.length > 0 ? CompanionList : <img src={emptyUser} alt="empty" />}
+          {CompanionList.length > 0 ? (
+            CompanionList
+          ) : (
+            <div className="chat__dialog-list--empty-user">
+              <img src={emptyUser} alt="empty" />
+              <div className="chat__dialog-list--text">There is no other users yet</div>
+            </div>
+          )}
         </div>
         <div className="chat__message-box">
           <div className="chat__message-body">

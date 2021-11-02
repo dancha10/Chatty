@@ -17,8 +17,9 @@ interface MessageBodyType extends DialogHeaderType {
 
 export const MessageBody: React.FC<MessageBodyType> = ({ name, lastSeen, MessageListDate }) => {
   const MessageList = MessageListDate.map(messages => {
-    if (messages.sender === 'I') return <MyMessage myMessage={messages.message} />;
-    return <CompanionMessage myMessage={messages.message} />;
+    if (messages.sender === 'I')
+      return <MyMessage myMessage={messages.message} key={messages.idMessage} />;
+    return <CompanionMessage myMessage={messages.message} key={messages.idMessage} />;
   });
 
   return (
