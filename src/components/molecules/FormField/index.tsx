@@ -2,8 +2,6 @@ import React from 'react';
 import { Label, LabelType } from '../../atoms/Label';
 import { Input, InputType } from '../../atoms/Input';
 
-import './style.scss';
-
 interface FormFieldType extends InputType, LabelType {}
 
 export const FormField: React.FC<FormFieldType> = ({

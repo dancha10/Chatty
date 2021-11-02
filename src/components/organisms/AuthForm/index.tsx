@@ -18,10 +18,8 @@ export const AuthForm = () => {
     formState: { errors },
   } = useForm<InputValidatorType>();
   const history = useHistory();
-  const onSubmit: SubmitHandler<InputValidatorType> = data => {
+  const onSubmit: SubmitHandler<InputValidatorType> = data =>
     history.push(SCREENS.SCREENS__MESSENGER);
-    console.log(data);
-  };
 
   return (
     <form className="auth-form" onSubmit={handleSubmit(onSubmit)}>
@@ -39,7 +37,7 @@ export const AuthForm = () => {
               pattern: { value: /^[A-Za-zA-Яа-яЁё ]+$/i, message: 'The entered data is incorrect' },
             }),
           }}
-          isError={errors.name && true}
+          isError={errors.name !== undefined ? true : errors.name}
         />
         {/* Только после того как нагородил это, узнал про yup.... */}
         {errors.name && <span className="auth-form__error">{errors.name.message}</span>}
@@ -58,7 +56,7 @@ export const AuthForm = () => {
               maxLength: { value: 25, message: 'Max length exceeded' },
             }),
           }}
-          isError={errors.pass && true}
+          isError={errors.pass !== undefined ? true : errors.pass}
         />
         {errors.pass && <span className="auth-form__error">{errors.pass.message}</span>}
       </div>
