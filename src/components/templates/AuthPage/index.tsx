@@ -7,7 +7,7 @@ import Corner from '../../../img/Angle.svg';
 import Stick from '../../../img/CircleWithStick.svg';
 import Cross from '../../../img/Cross.svg';
 
-const AuthPage = () => {
+export const AuthPage = () => {
   return (
     <div className="auth-page">
       <div className="auth-page__container">
@@ -15,8 +15,8 @@ const AuthPage = () => {
           <div className="auth-page__greetings">
             <Logo />
             <h1 className="auth-page__title">
-              Welcome to <span className="_title--blue">Chatty</span>
-              <span className="_title--light">!</span>
+              Welcome to <span className="auth-page__title--blue">Chatty</span>
+              <span className="auth-page__title--light">!</span>
             </h1>
             <h2 className="auth-page__subtitle">Please, autorize yourself</h2>
           </div>
@@ -52,5 +52,3 @@ const AuthPage = () => {
     </div>
   );
 };
-
-export default AuthPage;

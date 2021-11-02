@@ -62,6 +62,15 @@
   // .auth-page__title
   &__title {
     margin: 16.2px 0px 0px 0px;
+    // ._title--blue
+    &--blue {
+      color: #5E93E7;
+    }
+
+    // ._title--light
+    &--light {
+      color: #B3CDF8;
+    }
   }
 
   // .auth-page__subtitle
@@ -73,15 +82,6 @@
   }
 }
 
-// ._title--blue
-._title--blue {
-  color: #5E93E7;
-}
-
-// ._title--light
-._title--light {
-  color: #B3CDF8;
-}
 
 // Decoration
 
