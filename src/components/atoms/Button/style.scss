@@ -1,8 +1,8 @@
-.btn {
+.login-btn {
   background: #5C98F1;
   border-radius: 8px;
   //padding: 17.3px 95.65px;
-  width: 233px;
+  width: 171px;
   height: 56px;
   font-weight: 500;
   font-size: 15px;
@@ -19,5 +19,33 @@
   }
   &:disabled {
     background: #D1D1D1;
+  }
+}
+.registration-btn {
+  background: #FFFFFF;
+  border: 1px solid #5C98F1;
+  border-radius: 8px;
+  //padding: 17.3px 95.65px;
+  width: 171px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.53em;
+  color: #5C98F1;
+  transition: all 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      background: #F3F8FF;
+    }
+  }
+
+  &:focus {
+    background: #DFECFF;
+  }
+
+  &:disabled {
+    border: 1px solid #D1D1D1;
+    background: #FFFFFF;
+    color: #D1D1D1;
   }
 }

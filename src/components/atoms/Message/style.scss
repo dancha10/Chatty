@@ -14,25 +14,35 @@
   border-radius: 12px 0px 12px 12px;
   float: right;
   margin: 0px 36px 36px 0px;
+  @media (max-width: $md3) {
+      margin: 0px 15px 24px 0px;
+  }
 
   &:after {
     position: absolute;
     content: '';
-    border: 12px solid transparent;
-    border-left: 12px solid #C5DAFF;
-    border-top: 12px solid #C5DAFF;
+    border: 10px solid transparent;
+    border-top: 10px solid #C5DAFF;
     top: -2%;
     right: -20%;
   }
+
   &:before {
     position: absolute;
     content: '';
-    border: 12px solid transparent;
-    border-left: 12px solid #D7E6FF;
-    border-top: 12px solid #D7E6FF;
+    border: 10px solid transparent;
+    border-top: 10px solid #D7E6FF;
     top: 0%;
-    right: -18%;
-    z-index: 12;
+    right: -17%;
+    z-index: 1;
+  }
+  &.msg--file:before {
+    right: -5%;
+    top: 0%;
+  }
+  &.msg--file:after {
+    right: -6%;
+    top: -2%;
   }
 
   @media (max-width: $md3) {
@@ -42,30 +52,41 @@
   }
 
 
+
   &--companion {
     background: #FFFFFF;
     border-radius: 0px 12px 12px 12px;
     float: left;
     margin: 0px 0px 36px 36px;
+    @media (max-width: $md3) {
+      margin: 0px 0px 24px 15px;
+    }
+
     &:after {
       position: absolute;
       content: '';
-      border: 12px solid transparent;
-      border-right: 12px solid #C5DAFF;
-      border-top: 12px solid #C5DAFF;
+      border: 10px solid transparent;
+      border-top: 10px solid #C5DAFF;
       top: -2%;
-      right: 87%;
-
+      right: 88%;
     }
+
     &:before {
       position: absolute;
       content: '';
-      border: 12px solid transparent;
-      border-right: 12px solid #FFFFFF;
-      border-top: 12px solid #FFFFFF;
+      border: 10px solid transparent;
+      border-top: 10px solid #FFFFFF;
+      top: -1%;
+      right: 86%;
+      z-index: 1;
+    }
+    &.msg--file:before {
+      right: 92%;
       top: 0%;
-      right: 85%;
-
+    }
+    &.msg--file:after {
+      right: 93%;
+      top: -2%;
     }
   }
 

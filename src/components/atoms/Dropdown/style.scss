@@ -1,0 +1,73 @@
+@import "./src/styles/variables";
+
+.dropdown {
+  width: 171px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid #B3CDF8;
+  background: #FFFFFF;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.5em;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 45%;
+    right: 16px;
+    background: url("./../../../img/arrow.svg") no-repeat;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    z-index: 0;
+  }
+
+  &._active {
+    border: 1px solid #5C98F1;
+    &::after {
+      transform: rotate(-180deg) translate(30%, 60%);
+    }
+  }
+  &._error {
+    border: 1px solid #FB6262;
+  }
+
+
+
+  &__main {
+    cursor: pointer;
+    border-radius: 8px;
+    width: 165px;
+    height: 54px;
+    padding: 16px;
+  }
+
+  &__content {
+    position: absolute;
+    margin-top: 4px;
+    left: -1px;
+    z-index: 2;
+  }
+
+  &__item {
+    width: 171px;
+    height: 56px;
+    border: 1px solid #B3CDF8;
+    color: $dark;
+    background: #FFFFFF;
+    padding: 16px;
+    cursor: pointer;
+
+    &:first-child {
+      border-radius: 8px 8px 0px 0px;
+    }
+
+    &:last-child {
+      border-radius: 0px 0px 8px 8px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "src/styles/variables";
+
+.captcha {
+  display: flex;
+  &__input > div {
+    width: 171px;
+  }
+  &__input input {
+    width: 171px;
+  }
+  &__output {
+    margin: 0px 0px 0px 12px;
+    align-self: flex-end;
+    display: flex;
+  }
+  &__wrapper {
+    width: 171px;
+    height: 56px;
+    border: 1px solid #B3CDF8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $md3) {
+      width: 166px;
+      height: 48px;
+      position: relative;
+    }
+  }
+  &__img {
+    text-align: center;
+
+  }
+  &__btn {
+    background: #FFFFFF;
+    margin: 0px 0px 0px 12px;
+    height: 16px;
+    align-self: center;
+    @media (max-width: $md3) {
+      position: absolute;
+      right: 3%;
+      margin: 0;
+      height: 11px;
+      & img {
+        width: 11px;
+      }
+    }
+  }
+}

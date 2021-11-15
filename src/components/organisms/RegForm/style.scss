@@ -1,0 +1,47 @@
+@import "./src/styles/variables";
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  &__greetings {
+    @media (max-width: $md3) {
+      top: -17%;
+    }
+  }
+
+  &__login, &__password, &__confirm-password, &__nickname, &__gender, &__captcha {
+    @media (min-width: $md3) {
+      margin: 0px 0px 32px 0px;
+    }
+    margin: 0px 0px 24px 0px;
+    position: relative;
+  }
+
+  &__buttons {
+    display: flex;
+    @media (min-width: $md4) {
+      & button {
+        &:not(:last-child) {
+          margin: 0px 12px 0px 0px;
+        }
+      }
+    }
+    @media (max-width: $md4) {
+      flex-direction: column;
+      & button {
+        width: 100%;
+        &:not(:last-child) {
+          margin: 0px 0px 8px 0px;
+        }
+      }
+    }
+  }
+  &__error-message {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.46em;;
+    color: #FB6262;
+    position: absolute;
+    left: 2%;
+  }
+}

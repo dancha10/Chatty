@@ -20,7 +20,7 @@ export const Message: React.FC<MessageType> = ({
 }) => {
   if (type === 'file')
     return (
-      <div className="message">
+      <div className={classList('message msg--file', { 'message--companion': isCompanionMessage })}>
         <div className="message__file">
           <img src={fileIcon} alt="file-ico" />
           <div className="message__body">
