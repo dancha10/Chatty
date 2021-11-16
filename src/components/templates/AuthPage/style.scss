@@ -20,21 +20,20 @@
     position: relative;
     background: #FFFFFF;
     flex: 0 1 716px;
-    padding: 256px 0px 315px 121px;
+    height: 1080px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
     @media (max-width: $md3) {
-      padding: 75px 14px 24px;
+      padding: 24px 0px 16px;
       order: 2;
       flex: 0 1 100%;
     }
-    @media (max-width: $md5) {
-      & button {
-        width: 100%;
-        text-align: center;
-      }
-      & input {
-        width: 100%;
-      }
-    }
+
+  }
+
+  &__form {
+    margin: 0 auto;
   }
 
   // .auth-page__decoration-side
@@ -44,6 +43,7 @@
     @media (max-width: $md3) {
       order: 1;
       border-radius: 0px 0px 16px 16px;
+      flex: 0 1 256px;
     }
   }
 
@@ -88,11 +88,6 @@
 .side-decoration {
   position: relative;
   overflow: hidden;
-  @media (max-width: $md5) {
-    height: 375px;
-    min-height: 375px;
-    flex: 0 1 375px;
-  }
 
   // .side-decoration__main-decoration
   &__main-decoration {
@@ -104,6 +99,11 @@
       transform: rotate(-90deg);
       bottom: 0;
       right: -49%;
+    }
+    @media (max-width: $md4) {
+      width: 70%;
+      bottom: 7%;
+      right: -32%
     }
   }
 
@@ -119,7 +119,9 @@
       top: -35%;
       width: 191px;
       height: 86%;
-
+    }
+    @media (max-width: $md4) {
+      display: none;
     }
   }
 
@@ -141,6 +143,9 @@
       right: 50%;
       top: 35%;
     }
+    @media (max-width: $md4) {
+      top: 7%;
+    }
   }
 
   // .side-decoration__circle-stick
@@ -156,6 +161,11 @@
       left: 10%;
       top: 19%;
     }
+    @media (max-width: $md4) {
+      left: 6%;
+      top: -7%;
+    }
+
   }
 }
 
@@ -172,6 +182,9 @@
     height: 125px;
     left: 47%;
     top: -24%
+  }
+  @media (max-width: $md4) {
+    display: none;
   }
 }
 
@@ -208,6 +221,10 @@
     top: 50%;
     transform: translateY(-50%);
   }
+  @media (max-width: $md4) {
+    left: 46%;
+    top: 25%;
+  }
 }
 
 // ._circle--small
@@ -230,6 +247,9 @@
     left: 80%;
     top: 30%;
   }
+  @media (max-width: $md4) {
+    top: 5%;
+  }
 }
 
 // ._position-second
@@ -240,6 +260,10 @@
   @media (max-width: $md3) {
     left: 85%;
     top: 35%
+  }
+  @media (max-width: $md4) {
+    top: 12%;
+    left: 84%;
   }
 }
 

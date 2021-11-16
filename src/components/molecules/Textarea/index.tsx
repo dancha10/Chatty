@@ -10,17 +10,19 @@ type TextareaType = {
 export const Textarea: React.FC<TextareaType> = ({ placeholder = 'Write something...' }) => {
   return (
     <form className="textarea">
-      <div className="textarea__button--file">
-        <AddFile />
+      <div className="textarea__input">
+        <div className="textarea__button--file">
+          <AddFile />
+        </div>
+        <textarea
+          name="textarea-message"
+          id="textarea-message"
+          cols={30}
+          rows={5}
+          placeholder={placeholder}
+          className="textarea__input-message"
+        />
       </div>
-      <textarea
-        name="textarea-message"
-        id="textarea-message"
-        cols={30}
-        rows={5}
-        placeholder={placeholder}
-        className="textarea__input"
-      />
       <div className="textarea__button--send">
         <SendMessage />
       </div>

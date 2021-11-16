@@ -94,6 +94,12 @@
   &__file {
     display: flex;
     align-items: center;
+    @media (max-width: $md3) {
+        & img {
+          height: 31px;
+          width: 25px;
+        }
+    }
   }
 
   // .my-message__body

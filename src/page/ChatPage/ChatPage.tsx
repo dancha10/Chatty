@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Chat } from '../../components/templates/Chat';
 import { CompanionListObject, MessageListObject } from '../../store';
 
 const CompanionListData: Array<CompanionListObject> = [
-  { id: 1, name: 'Danil Bruh', lastMessage: 'Wtf', sex: 'male' },
-  { id: 2, name: 'Bulat Gonvuk', lastMessage: 'Go walk', sex: 'female' },
-  { id: 3, name: 'Penivais Omskiy', lastMessage: 'Go drink beer 387', sex: 'male' },
-  { id: 4, name: 'Oksi San', lastMessage: 'arigato', sex: 'female' },
-  { id: 5, name: 'Billy Herrington', lastMessage: 'Semeen', sex: 'male' },
-  { id: 6, name: 'Van Larr', lastMessage: 'Gucci', sex: 'male' },
-  { id: 7, name: 'Lui Viton', lastMessage: 'Give me your many', sex: 'female' },
+  { id: 1, name: 'Danil Bruh', sex: 'male' },
+  { id: 2, name: 'Bulat Gonvuk', sex: 'female' },
+  { id: 3, name: 'Penivais Omskiy', sex: 'male' },
+  { id: 4, name: 'Oksi San', sex: 'female' },
+  { id: 5, name: 'Billy Herrington', sex: 'male' },
+  { id: 6, name: 'Van Larr', sex: 'male' },
+  { id: 7, name: 'Lui Viton', sex: 'female' },
 ];
 
 const MessageListDate: Array<MessageListObject> = [
@@ -20,22 +20,130 @@ const MessageListDate: Array<MessageListObject> = [
       {
         idMessage: 1,
         isCompanionMessage: true,
+        type: 'text',
         message: 'Koko lo',
       },
       {
         idMessage: 2,
         isCompanionMessage: false,
+        type: 'text',
         message: 'Kek',
       },
       {
         idMessage: 3,
         isCompanionMessage: true,
+        type: 'file',
+        size: '1.1MB',
         message: 'Ubit Billa',
       },
       {
         idMessage: 4,
         isCompanionMessage: false,
+        type: 'file',
+        size: '10.1MB',
         message: 'Uma TUrman',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
+      },
+      {
+        idMessage: 2,
+        isCompanionMessage: false,
+        type: 'text',
+        message: 'Kek',
       },
     ],
   },
@@ -45,12 +153,14 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        isCompanionMessage: true,
+        isCompanionMessage: false,
+        type: 'text',
         message: 'DHSHFDSHFJ',
       },
       {
         idMessage: 2,
-        isCompanionMessage: false,
+        isCompanionMessage: true,
+        type: 'text',
         message: 'beeeerrr',
       },
     ],
@@ -62,11 +172,13 @@ const MessageListDate: Array<MessageListObject> = [
       {
         idMessage: 1,
         isCompanionMessage: true,
+        type: 'text',
         message: 'MAMA',
       },
       {
         idMessage: 2,
         isCompanionMessage: false,
+        type: 'text',
         message: 'PAPA',
       },
     ],
@@ -77,12 +189,14 @@ const MessageListDate: Array<MessageListObject> = [
     dialog: [
       {
         idMessage: 1,
-        isCompanionMessage: true,
+        isCompanionMessage: false,
+        type: 'text',
         message: 'MAMA',
       },
       {
         idMessage: 2,
-        isCompanionMessage: false,
+        isCompanionMessage: true,
+        type: 'text',
         message: 'PAPA',
       },
     ],
@@ -94,11 +208,13 @@ const MessageListDate: Array<MessageListObject> = [
       {
         idMessage: 1,
         isCompanionMessage: true,
+        type: 'text',
         message: 'LEATHERMAN',
       },
       {
         idMessage: 2,
         isCompanionMessage: false,
+        type: 'text',
         message: '300BUCKS',
       },
     ],
@@ -110,11 +226,13 @@ const MessageListDate: Array<MessageListObject> = [
       {
         idMessage: 1,
         isCompanionMessage: true,
+        type: 'text',
         message: 'GUGG',
       },
       {
         idMessage: 2,
         isCompanionMessage: false,
+        type: 'text',
         message: 'FUCK',
       },
     ],
@@ -126,11 +244,13 @@ const MessageListDate: Array<MessageListObject> = [
       {
         idMessage: 1,
         isCompanionMessage: true,
+        type: 'text',
         message: 'GMMMUGG',
       },
       {
         idMessage: 2,
         isCompanionMessage: false,
+        type: 'text',
         message: 'BOSS',
       },
     ],
@@ -138,5 +258,13 @@ const MessageListDate: Array<MessageListObject> = [
 ];
 
 export const ChatPage = () => {
+  /* const wsChannel = new WebSocket(
+      `ws://109.194.37.212:2346/?type=test&ws_id=${localStorage.getItem('connect_key')}`
+    );
+    useEffect(() => {
+      wsChannel.addEventListener('error', e => {
+        console.log(e);
+      });
+    }, []); */
   return <Chat MessageListDate={MessageListDate} CompanionListData={CompanionListData} />;
 };

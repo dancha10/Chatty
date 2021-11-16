@@ -1,8 +1,9 @@
 @import "./src/styles/variables";
 
 .chat {
-  width: $maxWidth;
-  height: 1080px; // Вери странно ...
+  max-width: $maxWidth;
+  max-height: 1080px; // Вери странно ...
+  height: 100vh;
   margin: 0 auto;
   position: relative;
 
@@ -14,6 +15,23 @@
     align-items: center;
     background: #FFFFFF;
     border-bottom: 1px solid #88ABE3;
+    transition: all 0.7s ease;
+    @media (max-width: $md3) {
+      position: absolute;
+      height: 64px;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      & img {
+        max-width: 31px;
+      }
+    }
+
+    &--hidden {
+      //display: none;
+      left: -100%;
+    }
   }
 
   &__profile {
@@ -24,23 +42,42 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
     text-align: center;
     vertical-align: center; // На всякий пусть будет хы
+    @media (max-width: $md3) {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &__container {
     display: flex;
+    justify-content: space-between;
+    max-height: 1000px;
+    height: 100%;
   }
 
   &__dialog-list {
     position: relative;
-    width: 370px;
-    max-height: 1100px;
+    flex: 0 1 370px;
+    max-height: 1000px;
     background: #FFFFFF;
     overflow-y: auto;
-    //scrollbar-color: #C5DAFF #E1ECFE;
-    &::-webkit-scrollbar {
-      width: 6px; /* ширина для вертикального скролла */
+    transition: all 0.7s ease;
+    @media (max-width: $md3) {
       position: absolute;
-      //height: 8px;
+      width: 100%;
+      height: calc(100% - 64px);
+      top: 64px;
+      left: 0;
+      z-index: 1000;
+    }
+
+    &--mobile-active {
+      left: -100%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      position: absolute;
       background-color: #E1ECFE;
     }
 
@@ -50,36 +87,36 @@
 
     &--empty-user {
       transform: translate(27%, 90%); // Ну пока костыль
-
-
-    & img {
-      border-radius: 50%;
-      margin: 0px 0px 23px 0px;
+      & img {
+        border-radius: 50%;
+        margin: 0px 0px 23px 0px;
+      }
     }
   }
-}
 
-&__message-box {
-  flex: 0 1 1078px;
-  background: #EFF5FF url("./../../../img/messanger_bg.jpg") no-repeat -1px -80px /cover;
-  border-left: 1px solid #88ABE3;
+  &__message-wrapper {
+    flex: 0 1 1078px;
+    background: #EFF5FF url("./../../../img/messanger_bg.jpg") no-repeat -1px -80px /cover;
+    @media (min-width: $md3) {
+      border-left: 1px solid #88ABE3;
+    }
 
-}
+  }
 
-&__message-body {
-  min-height: 800px;
-  position: relative;
-}
+  &__message-body {
+    height: 100%;
+    position: relative;
+  }
 
-&__msg-start {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 19px 46px;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid #5E93E7;
-  border-radius: 32px;
-}
-
+  &__msg-start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    padding: 19px 46px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #5E93E7;
+    border-radius: 32px;
+  }
 }

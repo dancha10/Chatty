@@ -1,26 +1,27 @@
-import React from 'react';
-import { Logo } from '../../atoms/Logo';
+import React, { useState } from 'react';
 import { AuthForm } from '../../organisms/AuthForm';
 import './style.scss';
 import Main from '../../../img/main.png';
 import Corner from '../../../img/Angle.svg';
 import Stick from '../../../img/CircleWithStick.svg';
 import Cross from '../../../img/Cross.svg';
+import { RegForm } from '../../organisms/RegForm';
 
 export const AuthPage = () => {
+  const [isLogin, setLogin] = useState<boolean>(false);
   return (
     <div className="auth-page">
       <div className="auth-page__container">
         <div className="auth-page__login-side">
-          <div className="auth-page__greetings">
-            <Logo />
-            <h1 className="auth-page__title">
-              Welcome to <span className="auth-page__title--blue">Chatty</span>
-              <span className="auth-page__title--light">!</span>
-            </h1>
-            <h2 className="auth-page__subtitle">Please, autorize yourself</h2>
-          </div>
-          <AuthForm />
+          {isLogin ? (
+            <div className="auth-page__form">
+              <RegForm setLogin={setLogin} />
+            </div>
+          ) : (
+            <div className="auth-page__form">
+              <AuthForm setLogin={setLogin} />
+            </div>
+          )}
         </div>
         <div className="auth-page__decoration-side side-decoration">
           <img src={Main} alt="Main-Bottom" className="side-decoration__main-decoration" />

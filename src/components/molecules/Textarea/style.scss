@@ -1,22 +1,53 @@
+@import "src/styles/variables";
+
 .textarea {
   max-width: 1078px;
-  height: 80px;
+  max-height: 80px;
   display: flex;
-  align-items: center;
+  //align-items: center;
   justify-content: space-between;
   padding: 30px;
   background: #FFFFFF;
+  @media (max-width: $md3) {
+    height: 48px;
+    padding: 16px 18px;
+    & img {
+      width: 16px;
+      height: 14px;
+    }
+  }
 
   &__input {
-    width: 920px;
+    display: flex;
+    max-width: 750px;
+    width: 100%;
+    margin: 0px 20px 0px 0px;
+    @media (max-width: $md3) {
+      & img {
+        width: 16px;
+        height: 17px;
+      }
+    }
+  }
+
+  &__input-message {
     resize: none;
-    height: 25px;
+    width: 100%;
+
     &::placeholder {
-      transform: translateY(3px);
       font-weight: 500;
-      font-size: 16px;
-      line-height: 1.25em;
+      font-size: 14px;
+      line-height: 1.21em;
       color: #CACACA;
+    }
+  }
+
+  &__button {
+    &--file {
+      margin: 0px 37px 0px 0px;
+      @media (max-width: $md3) {
+        margin: 0px 20px 0px 0px;
+      }
     }
   }
 }

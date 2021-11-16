@@ -3,8 +3,9 @@
 .auth-form {
   display: flex;
   flex-direction: column;
+  //margin: 0px 0px 0px 121px;
 
-  &__login {
+  &__login, &__password {
     @media (min-width: $md3) {
       margin: 0px 0px 32px 0px;
     }
@@ -12,13 +13,6 @@
     position: relative;
   }
 
-  &__password {
-    @media (min-width: $md3) {
-      margin: 0px 0px 48px 0px;
-    }
-    margin: 0px 0px 80px 0px;
-    position: relative;
-  }
   &__error {
     font-weight: 500;
     font-size: 13px;
@@ -26,5 +20,33 @@
     color: #FB6262;
     position: absolute;
     left: 2%;
+  }
+
+  &__captcha {
+    @media (min-width: $md3) {
+      margin: 0px 0px 32px 0px;
+    }
+    margin: 0px 0px 24px 0px;
+    position: relative;
+  }
+
+  &__buttons {
+    display: flex;
+    @media (min-width: $md4) {
+      & button {
+        &:not(:last-child) {
+          margin: 0px 12px 0px 0px;
+        }
+      }
+    }
+    @media (max-width: $md4) {
+      flex-direction: column;
+      & button {
+        width: 100%;
+        &:not(:last-child) {
+            margin: 0px 0px 8px 0px;
+        }
+      }
+    }
   }
 }

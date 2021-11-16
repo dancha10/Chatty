@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-import './style.scss';
 import ArrowBack from '../../../img/mobileArrow.svg';
 import { Avatar, AvatarType } from '../Avatar';
 import { ContextUserList } from '../../../utils/context';
 import { SCREENS } from '../../../routes/endpoints';
+import './style.scss';
 
 export interface DialogHeaderType extends AvatarType {
   name: string;
@@ -12,7 +12,6 @@ export interface DialogHeaderType extends AvatarType {
 }
 
 export const DialogHeader: React.FC<DialogHeaderType> = ({ name, lastSeen, sex }) => {
-  // TODO: по клику на кнопку добавлять класс диалог листу
   const Context = useContext(ContextUserList);
   const history = useHistory();
   return (

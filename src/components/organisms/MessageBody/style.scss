@@ -1,25 +1,47 @@
+@import "./src/styles/variables";
+
 .message-body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  max-height: 1080px;
+  height: 100vh;
+
+  &__header {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      top: 10px;
+      left: 0;
+      background: #D7E6FF;
+    }
+  }
 
   &__message-box {
-    flex: 0 1 922px;
+    flex: 1 1 auto;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    padding: 5px 0px 0px 0px;
+
     &::-webkit-scrollbar {
       width: 6px; /* ширина для вертикального скролла */
       position: absolute;
-      //height: 8px;
       background-color: #E1ECFE;
     }
+
     &::-webkit-scrollbar-thumb {
       background-color: #C5DAFF;
     }
+
     & > li {
       list-style-type: none;
+    }
+
+    & > li:first-child {
+      margin-top: auto !important;
     }
   }
 }
